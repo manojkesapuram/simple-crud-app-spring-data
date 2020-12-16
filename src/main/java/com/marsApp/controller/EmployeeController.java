@@ -70,4 +70,8 @@ public class EmployeeController {
         return response;
     }
     
+    @GetMapping("/employeesCount")
+    public String getCount() {    	 
+        return "The count is : " + employeeRepository.findAll().size();
+    }
 }
