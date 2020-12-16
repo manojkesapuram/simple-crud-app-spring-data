@@ -27,3 +27,7 @@ Below are end points urls and methods , please use POSTMAN app or SOAP UI to tes
     URL:http://localhost:8080/api/v1/employees
     response: [{"id":1,"firstName":"Test1","lastName":"lastName1","emailId":"emailId1"},{"id":2,"firstName":"Test1","lastName":"lastName1","emailId":"emailId1"}]
   
+  Get count of Employee present
+    Method :GET
+    URL : http://localhost:8080/api/v1/employeesCount
+    Response : The count is : 1
