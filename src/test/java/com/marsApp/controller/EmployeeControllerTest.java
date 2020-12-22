@@ -1,5 +1,6 @@
 package com.marsApp.controller;
 
+
 import static org.junit.Assert.assertNull;
 
 import org.junit.Before;
@@ -14,37 +15,38 @@ import com.marsApp.repo.EmployeeRepository;
 
 @RunWith(PowerMockRunner.class)
 public class EmployeeControllerTest {
-	@Mock
-	private EmployeeRepository employeeRepository;
+    @Mock
+    private EmployeeRepository employeeRepository;
+    
+    @Mock
+    private Employee empMock;
+    
+    @InjectMocks
+    EmployeeController empController;
+    
+    @Before
+    public void setup() {
+    	empController=new EmployeeController();
+    }
+    
+    @Test(expected=NullPointerException.class)
+    public void test_method_getAllEmployees() {
+    	assertNull(empController.getAllEmployees());
+    }
 
-	@Mock
-	private Employee empMock;
-
-	@InjectMocks
-	EmployeeController empController;
-
-	@Before
-	public void setup() {
-		empController = new EmployeeController();
-	}
-
-	@Test(expected = NullPointerException.class)
-	public void test_method_getAllEmployees() {
-		assertNull(empController.getAllEmployees());
-	}
-
-	@Test(expected = NullPointerException.class)
-	public void test_method_getAllGetCount() {
-		assertNull(empController.getCount());
-	}
-
-	@Test(expected = NullPointerException.class)
-	public void test_method_createEmployee() {
-
-		empMock.setFirstName("test");
-		empMock.setId(1);
-		empMock.setLastName("testLast");
+    @Test(expected=NullPointerException.class)
+    public void test_method_getAllGetCount() {
+    	assertNull(empController.getCount());
+    }
+    
+    @Test(expected=NullPointerException.class)
+    public void test_method_createEmployee() {
+    	
+    	empMock.setFirstName("test");
+    	empMock.setId(1);
+    	empMock.setLastName("testLast");
 		assertNull(empController.createEmployee(empMock));
-	}
+    }
 
+   
 }

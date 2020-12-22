@@ -9,5 +9,5 @@ class SimpleCrudAppSpringDataApplicationTests {
 	@Test
 	void contextLoads() {
 	}
-	//TO DO 
+
 }
