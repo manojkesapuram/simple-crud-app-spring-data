@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.marsApp.dto.Employee;
 
 @Repository
-public interface EmployeeRepository extends JpaRepository<Employee, Long>{
+public interface EmployeeRepository extends JpaRepository<Employee, Long> {
 
 }

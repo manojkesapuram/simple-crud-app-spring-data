@@ -2,6 +2,6 @@ package com.marsApp.service;
 
 public class Service {
 
-	
-	// TO DO further enhnacements
+	// Will contain service implementation 
+	//will be updated in furthur enhancements
 }
